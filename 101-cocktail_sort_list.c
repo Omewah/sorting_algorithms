@@ -7,7 +7,9 @@
  */
 void node_swap(listint_t **node, listint_t **list)
 {
-	listint_t *z1 = *node, *z2, *z3;
+	listint_t *z1 = *node;
+	listint_t *z2;
+	listint_t *z3;
 
 	if (!(*node)->prev)
 		*list = (*node)->next;
@@ -33,11 +35,12 @@ void node_swap(listint_t **node, listint_t **list)
 }
 /**
  * cocktail_sort_list - sorts a doubly LL in ascending order
- * @list: the doubly LL to be sort
+ * @list: the doubly LL to sort
  */
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *i, *z;
+	listint_t *i;
+	listint_t *z;
 	int a = 0;
 	int b = -1;
 	int c = -1;
